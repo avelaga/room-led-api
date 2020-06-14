@@ -11,14 +11,6 @@ You can do this by accessing the get endpoint - '/?hue=<:number>'
 
 ### To start at boot with the use of screen:
 - Install screen with `sudo apt-get install screen`
-- Run `nano startup` at the home directory to create a script
-- Copy in this - 
-
-```#!/bin/bash```
-
-```cd /home/pi/room-led-api && export FLASK_APP=api.py && flask run -h 0.0.0.0 -p 8000```
-
-This goes to the directory and then sets up and runs the flask dev server with the custom hostname and port configuration
-- After you save and exit, run `chmod +x ~/startup` to give it execution permissions
-- Run `sudo nano /etc/rc.local` to edit a file that runs at boot and add `sudo su - pi -c "screen -dm -S pistartup ~/startup"` at the end right before `exit 0`. This starts a detached screen named pistartup and then runs the script startup in it.
-- Run `sudo reboot` and see if the api works at the expected url when it's back up. To verify if the screen was created properly, ssh in and run `screen -list` to see all screens. You should see one titled pistartup which you can go into with the command `screen -r pistartup`
+- Go into the repo and run `chmod +x ~/startup` to give the startup script execution permissions
+- Run `sudo nano /etc/rc.local` to edit a file that runs at boot and add `sudo su - pi -c "screen -dm -S api ~/room-led-api/startup"` at the end right before `exit 0`. This starts a detached screen named api and then runs the script startup in it.
+- Run `sudo reboot` and see if the api works at the expected url when it's back up. To verify if the screen was created properly, ssh in and run `screen -list` to see all screens. You should see one titled pistartup which you can go into with the command `screen -r api`
