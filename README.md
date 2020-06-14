@@ -16,4 +16,7 @@ You can do this by accessing the get endpoint - '/?hue=<:number>'
 ```#!/bin/bash```
 
 ```cd /home/pi/room-led-api && export FLASK_APP=api.py && flask run -h 0.0.0.0 -p 8000```
+
+This goes to the directory and then sets up and runs the flask dev server with the custom hostname and port configugartion
 - Run `sudo nano /etc/rc.local` to edit a file that runs at boot and add `sudo su - pi -c "screen -dm -S pistartup ~/startup"` at the end right before `exit 0`. This starts a detached screen named pistartup and then runs the script startup in it.
+- Run `sudo reboot` and see if the api works at the expected url when it's back up. To verify if the screen was created properly, ssh in and run `screen -list' to see all screens. You should see one titled pistartup which you can go into with the command `screen -r pistartup`
