@@ -1,4 +1,4 @@
 Flask
 screen
 smbus
-
+flask-cors
