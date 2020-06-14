@@ -1,4 +1,4 @@
-#Flask backend for my room leds
+# Flask backend for my room leds
 To run:
 - Install the dependencies in requirements.txt
 - From the root of the repo, run 'export FLASK_APP=<filename>.py'
