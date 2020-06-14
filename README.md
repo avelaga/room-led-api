@@ -7,7 +7,7 @@ To run:
 The server will now be running at <ip/hostname>:8000 on the local network.
 
 The hue endpoint takes a required parameter, hue, that must be an int.
-You can do this by accessing the get endpoint - '/?hue=<:number>'
+You can do this by accessing the get endpoint with this syntax - '/hue?hue=<:number>'
 
 ### To start at boot with the use of screen:
 - Install screen with `sudo apt-get install screen`
