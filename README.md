@@ -13,5 +13,6 @@ You can do this by accessing the get endpoint - '/?hue=<:number>'
 - Run `nano startup` at the home directory to create a script
 - Copy in this - 
 ```#!/bin/bash```
+
 ```cd /home/pi/room-led-api && export FLASK_APP=api.py && flask run -h 0.0.0.0 -p 8000```
 - Run `sudo nano /etc/rc.local` to edit a file that runs at boot and add `sudo su - pi -c "screen -dm -S pistartup ~/startup"` at the end right before `exit 0`. This starts a detached screen named pistartup and then runs the script startup in it.
