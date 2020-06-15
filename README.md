@@ -15,3 +15,8 @@ Ideally you [connect an http server like apache to the server](https://flask.pal
 - Go into the repo and run `chmod +x ~/startup` to give the startup script execution permissions
 - Run `sudo nano /etc/rc.local` to edit a file that runs at boot and add `sudo su - pi -c "screen -dm -S api ~/room-led-api/startup"` at the end right before `exit 0`. This starts a detached screen named api and then runs the script startup in it.
 - Run `sudo reboot` and see if the api works at the expected url when it's back up. To verify if the screen was created properly, ssh in and run `screen -list` to see all screens. You should see one titled pistartup which you can go into with the command `screen -r api`
+
+## UI and Arduino Controller Repos:
+[React UI running on a Raspberry Pi 4 to control the LEDs](https://github.com/avelaga/room-led-ui)
+
+[Arduino code that controls the LEDs](https://github.com/avelaga/room-led-controller)
