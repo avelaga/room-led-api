@@ -17,7 +17,7 @@
 
 
 The hue endpoint takes a required parameter, hue, that must be an int.
-You can do this by accessing the get endpoint with this syntax - '/hue?hue=<:number>'
+You can do this by accessing the get endpoint with this syntax - `/hue?hue=<:number>`
 
 ## UI and Arduino Controller Repos:
 [React UI running on a Raspberry Pi 4 to control the LEDs](https://github.com/avelaga/room-led-ui)
