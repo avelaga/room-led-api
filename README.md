@@ -5,6 +5,7 @@
 [i followed this tutorial to set up flask with apache](https://www.bogotobogo.com/python/Flask/Python_Flask_HelloWorld_App_with_Apache_WSGI_Ubuntu14.php)
 
 ### To setup and run:
+- Clone this repo with the command `sudo git clone https://github.com/avelaga/room-led-api.git /var/www/html/led/` to get it in the right location
 - Install the dependencies with the command, `pip3 install -r requirements.txt`
 - Run `sudo apt-get install libapache2-mod-wsgi python-dev` to install the WSGI package
 - Eable the i2c interface with the command `sudo raspi-config`, navigating to `Interfacing Options`, and then `I2C`
