@@ -14,4 +14,4 @@ def hue():
 	return "set hue to " + str(hue)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
